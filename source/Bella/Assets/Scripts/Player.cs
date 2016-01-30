@@ -9,11 +9,10 @@ public class Player : MonoBehaviour
     public int maxInsanity = 100;
     public int dangerThreshold = 80;
     public int rateOfInsanityIncrease = 5;  // Per second
-
     public int speedLossPerBody = 0;
-
+    public weapons equippedWeapon = weapons.None; 
     private float insanityTickTimer = 0.0f;
-    
+    public enum weapons  {None = 0,Knife = 1, Sword = 2, Pistol = 3, Rifle = 4}
 	// Use this for initialization
 	void Start()
     {

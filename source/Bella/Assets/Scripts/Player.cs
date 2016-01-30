@@ -34,4 +34,9 @@ public class Player : MonoBehaviour
             }
         }
 	}
+
+    public void PickUpWeapon(WeaponPickup weapon)
+    {
+        Debug.Log("Picked up weapon");
+    }
 }

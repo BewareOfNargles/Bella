@@ -1,3 +1,10 @@
+source/Bella/Library/
+source/Bella/Temp/
+source/Bella/Obj/
+source/Bella/Build/
+source/Bella/Builds/
+source/Bella/Assets/AssetStoreTools*
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/

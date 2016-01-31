@@ -44,4 +44,13 @@ public class Player : MonoBehaviour
         currentWeapon = weapon;
         Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
     }
+
+    void OnJump()
+    {
+        NPCSoundHelper sh = GetComponentInChildren<NPCSoundHelper>();
+        if(sh)
+        {
+            sh.JumpSound();
+        }
+    }
 }

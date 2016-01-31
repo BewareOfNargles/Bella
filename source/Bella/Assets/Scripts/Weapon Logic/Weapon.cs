@@ -5,6 +5,7 @@ using System.Collections;
 public class Weapon : MonoBehaviour
 {
     public Player.weapons weaponType;
+    public GameObject bulletPrefab;
 
     public Player player;
 
@@ -28,6 +29,15 @@ public class Weapon : MonoBehaviour
 
     void Fire()
     {
+        if (bulletPrefab != null)
+        {
+            Transform startPoint = player.transform.Find("bulletStartPoint");
+            if (startPoint != null)
+            {
+                /*GameObject bullet = (GameObject)*/Instantiate(bulletPrefab, startPoint.position, Quaternion.identity);
+            }
+        }
+
         Debug.Log("Fire! (Weapon type " + weaponType.ToString() + ")");
         numShots--;
         if (numShots == 0)

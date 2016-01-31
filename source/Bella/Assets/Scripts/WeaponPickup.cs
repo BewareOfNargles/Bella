@@ -20,29 +20,32 @@ public class WeaponPickup : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null)
         {
-            // Grab the weapon component
-            Weapon weapon = GetComponent<Weapon>();
-
-            if (weapon != null)
+            if (player.equippedWeapon == Player.weapons.None)
             {
-                // Ready the weapon!
-                weapon.player = player;
-                weapon.enabled = true;
+                // Grab the weapon component
+                Weapon weapon = GetComponent<Weapon>();
 
-                // Kill the world sprite, it's not needed anymore.
-                SpriteRenderer worldSprite = GetComponentInChildren<SpriteRenderer>();
-                if (worldSprite)
+                if (weapon != null)
                 {
-                    Destroy(worldSprite);
+                    // Ready the weapon!
+                    weapon.player = player;
+                    weapon.enabled = true;
+
+                    // Kill the world sprite, it's not needed anymore.
+                    SpriteRenderer worldSprite = GetComponentInChildren<SpriteRenderer>();
+                    if (worldSprite)
+                    {
+                        Destroy(worldSprite);
+                    }
+
+                    // TODO: This line probably isn't even necessary?
+                    player.PickUpWeapon(weapon);
+                    // Set the player's correct equipped weapon type
+                    player.equippedWeapon = weapon.weaponType;
+
+                    // Kill the pickup logic!
+                    Destroy(this);
                 }
-
-                // TODO: This line probably isn't even necessary?
-                player.PickUpWeapon(weapon);
-                // Set the player's correct equipped weapon type
-                player.equippedWeapon = weapon.weaponType;
-
-                // Kill the pickup logic!
-                Destroy(this);
             }
         }
     }

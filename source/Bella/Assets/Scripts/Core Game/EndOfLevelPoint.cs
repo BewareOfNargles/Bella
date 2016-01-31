@@ -14,9 +14,9 @@ public class EndOfLevelPoint : MonoBehaviour {
 	
 	}
 
-    void OnCollisionEnter2D(Collider other)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        if(other.tag == "Player")
+        if(coll.gameObject.GetComponent<Player>()  != null)
         {
             SceneManager.LoadScene("WinLevel");
         }

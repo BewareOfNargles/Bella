@@ -10,11 +10,15 @@ public class Player : MonoBehaviour
     public int dangerThreshold = 80;
     public int rateOfInsanityIncrease = 5;  // Per second
     public int speedLossPerBody = 0;
-    public weapons equippedWeapon = weapons.None; 
+
+    public Weapon currentWeapon = null;
+    public weapons equippedWeapon = weapons.None;
     private float insanityTickTimer = 0.0f;
-    public enum weapons  {None = 0,Knife = 1, Sword = 2, Pistol = 3, Rifle = 4}
-	// Use this for initialization
-	void Start()
+
+    public enum weapons { None = 0, Knife = 1, Sword = 2, Pistol = 3, Rifle = 4 }
+
+    // Use this for initialization
+    void Start()
     {
 	    
 	}
@@ -30,13 +34,14 @@ public class Player : MonoBehaviour
             {
                 insanityTickTimer = 0;
                 insanity += rateOfInsanityIncrease;
-                Debug.Log("Insanity increased to " + insanity);
+                //Debug.Log("Insanity increased to " + insanity);
             }
         }
 	}
 
-    public void PickUpWeapon(WeaponPickup weapon)
+    public void PickUpWeapon(Weapon weapon)
     {
-        Debug.Log("Picked up weapon");
+        currentWeapon = weapon;
+        Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
     }
 }

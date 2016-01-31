@@ -38,6 +38,13 @@ public class WeaponPickup : MonoBehaviour
                         Destroy(worldSprite);
                     }
 
+                    // Also kill the box collider.
+                    BoxCollider2D collider = GetComponent<BoxCollider2D>();
+                    if (collider)
+                    {
+                        Destroy(collider);
+                    }
+
                     // Set the player's correct equipped weapon and type
                     player.PickUpWeapon(weapon);
                     player.equippedWeapon = weapon.weaponType;

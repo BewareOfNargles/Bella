@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UIWeapon : MonoBehaviour {
+public class NPC : MonoBehaviour
+{
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start()
+	{
+		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update()
+	{
+		
 	}
+
+    public void Die()
+    {
+
+    }
 }

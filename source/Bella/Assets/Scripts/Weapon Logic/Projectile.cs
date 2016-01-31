@@ -15,18 +15,18 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D m_rigidBody2D;
     private Vector2 m_velocity;
 
-	// Use this for initialization
-	void Start()
-	{
+    // Use this for initialization
+    void Start()
+    {
         m_rigidBody2D = GetComponent<Rigidbody2D>();
         m_velocity = new Vector2(speed * directionMultiplier, 0.0f);
 
         transform.localScale *= directionMultiplier;
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         // TODO: Remove this line once speed has been polished
         m_velocity.x = speed * directionMultiplier;
 
@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
-	}
+    }
 
     void FixedUpdate()
     {
@@ -45,9 +45,16 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // We don't care if the bullet collided with the player.
-        Player player = other.gameObject.GetComponent<Player>();
-        if (player == null)
+        if (other.gameObject.GetComponent<Player>() == null &&
+            other.gameObject.GetComponent<Projectile>() == null &&
+            other.gameObject.GetComponent<WeaponPickup>() == null)
         {
+            NPC npc = other.gameObject.GetComponent<NPC>();
+            if (npc != null)
+            {
+                npc.Die();
+            }
+
             Destroy(gameObject);
         }
     }

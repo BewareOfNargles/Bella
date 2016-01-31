@@ -38,8 +38,9 @@ public class WeaponPickup : MonoBehaviour
                         Destroy(worldSprite);
                     }
 
-                    // Set the player's correct equipped weapon and type
+                    // TODO: This line probably isn't even necessary?
                     player.PickUpWeapon(weapon);
+                    // Set the player's correct equipped weapon type
                     player.equippedWeapon = weapon.weaponType;
 
                     // Kill the pickup logic!

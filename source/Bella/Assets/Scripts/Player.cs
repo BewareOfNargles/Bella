@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityStandardAssets._2D;
 using System.Collections;
 
 public class Player : MonoBehaviour
@@ -15,12 +16,14 @@ public class Player : MonoBehaviour
     public weapons equippedWeapon = weapons.None;
     private float insanityTickTimer = 0.0f;
 
+    private PlatformerCharacter2D controller;
+
     public enum weapons { None = 0, Knife = 1, Sword = 2, Pistol = 3, Rifle = 4 }
 
     // Use this for initialization
     void Start()
     {
-	    
+        controller = GetComponent<PlatformerCharacter2D>();
 	}
 	
 	// Update is called once per frame
@@ -43,5 +46,10 @@ public class Player : MonoBehaviour
     {
         currentWeapon = weapon;
         Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
+    }
+
+    public PlatformerCharacter2D GetCharacterController()
+    {
+        return controller;
     }
 }

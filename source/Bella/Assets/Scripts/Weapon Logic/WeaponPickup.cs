@@ -38,9 +38,15 @@ public class WeaponPickup : MonoBehaviour
                         Destroy(worldSprite);
                     }
 
-                    // TODO: This line probably isn't even necessary?
+                    // Also kill the box collider.
+                    BoxCollider2D collider = GetComponent<BoxCollider2D>();
+                    if (collider)
+                    {
+                        Destroy(collider);
+                    }
+
+                    // Set the player's correct equipped weapon and type
                     player.PickUpWeapon(weapon);
-                    // Set the player's correct equipped weapon type
                     player.equippedWeapon = weapon.weaponType;
 
                     // Kill the pickup logic!

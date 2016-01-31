@@ -48,8 +48,18 @@ public class Player : MonoBehaviour
         Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
     }
 
+<<<<<<< HEAD
     public PlatformerCharacter2D GetCharacterController()
     {
         return controller;
+=======
+    void OnJump()
+    {
+        NPCSoundHelper sh = GetComponentInChildren<NPCSoundHelper>();
+        if(sh)
+        {
+            sh.JumpSound();
+        }
+>>>>>>> 705025158c8f7d4c2d61d8667d4fcebc5edc4c77
     }
 }

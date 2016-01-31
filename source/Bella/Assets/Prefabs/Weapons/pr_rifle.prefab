@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6185608}
   - 114: {fileID: 11408462}
   - 114: {fileID: 11495352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pr_rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 451616}
   - 212: {fileID: 21235904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rifle_centered
   m_TagString: Untagged
   m_Icon: {fileID: 0}

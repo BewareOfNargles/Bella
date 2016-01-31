@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6102434}
   - 114: {fileID: 11425914}
   - 114: {fileID: 11472600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pr_sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 437726}
   - 212: {fileID: 21217104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sword_centered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -3.57, z: 0}
+  m_LocalPosition: {x: -3.5, y: -3.66, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 437726}
@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 2
+  bulletPrefab: {fileID: 0}
   player: {fileID: 0}
   numShots: 1
   range: 1

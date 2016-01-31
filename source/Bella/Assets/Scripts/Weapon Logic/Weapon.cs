@@ -7,7 +7,6 @@ public class Weapon : MonoBehaviour
     public Player.weapons weaponType;
     public GameObject bulletPrefab;
 
-    [HideInInspector]
     public Player player;
 
     public int numShots = 1;
@@ -35,8 +34,7 @@ public class Weapon : MonoBehaviour
             Transform startPoint = player.transform.Find("bulletStartPoint");
             if (startPoint != null)
             {
-                GameObject bullet = (GameObject)Instantiate(bulletPrefab, startPoint.position, Quaternion.identity);
-                bullet.gameObject.GetComponent<Projectile>().directionMultiplier = player.GetCharacterController().GetDirectionMultiplier();
+                /*GameObject bullet = (GameObject)*/Instantiate(bulletPrefab, startPoint.position, Quaternion.identity);
             }
         }
 

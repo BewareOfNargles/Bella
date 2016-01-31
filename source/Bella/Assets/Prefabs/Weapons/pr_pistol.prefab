@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 3
-  bulletPrefab: {fileID: 148138, guid: 230a09bda07eb0447a09e32dd9094a47, type: 2}
   player: {fileID: 0}
   numShots: 3
   range: 2
@@ -136,11 +135,7 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 148138, guid: 230a09bda07eb0447a09e32dd9094a47, type: 2}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 126754}

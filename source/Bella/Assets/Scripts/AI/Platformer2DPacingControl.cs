@@ -15,6 +15,7 @@ public class Platformer2DPacingControl : MonoBehaviour
     private Transform forwardGroundCheck;
 
     private int currentDirection = 0;
+    public bool willBeGrounded = false;
 
     private const float k_GroundedRadius = 0.2f;
 
@@ -31,17 +32,22 @@ public class Platformer2DPacingControl : MonoBehaviour
 	{
 		
 	}
-
+    
     void FixedUpdate()
     {
-        bool willBeGrounded = false;
+        willBeGrounded = false;
 
         // The player will be grounded if a circlecast to the forward groundcheck position hits anything designated as ground
         Collider2D[] colliders = Physics2D.OverlapCircleAll(forwardGroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)
-                willBeGrounded = true;
+            {
+                //if (colliders[i].gameObject.GetComponent<WeaponPickup>() == null)
+                {
+                    willBeGrounded = true;
+                }
+            }
         }
 
         if (willBeGrounded)

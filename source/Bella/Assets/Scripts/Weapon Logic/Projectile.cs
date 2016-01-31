@@ -49,6 +49,12 @@ public class Projectile : MonoBehaviour
             other.gameObject.GetComponent<Projectile>() == null &&
             other.gameObject.GetComponent<WeaponPickup>() == null)
         {
+            NPC npc = other.gameObject.GetComponent<NPC>();
+            if (npc != null)
+            {
+                npc.Die();
+            }
+
             Destroy(gameObject);
         }
     }

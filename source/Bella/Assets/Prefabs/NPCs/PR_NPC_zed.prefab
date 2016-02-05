@@ -51,6 +51,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &186198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 433004}
+  - 114: {fileID: 11441804}
+  - 82: {fileID: 8270366}
+  m_Layer: 0
+  m_Name: Sounds (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &192300
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +120,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 468716}
   m_RootOrder: 1
+--- !u!4 &433004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468716}
+  m_RootOrder: 3
 --- !u!4 &468716
 Transform:
   m_ObjectHideFlags: 1
@@ -116,6 +145,7 @@ Transform:
   - {fileID: 415786}
   - {fileID: 428058}
   - {fileID: 411984}
+  - {fileID: 433004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &5066336
@@ -163,6 +193,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.68}
+--- !u!82 &8270366
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186198}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9591176
 Animator:
   serializedVersion: 3
@@ -198,6 +302,35 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11441804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02698c9cc4dea3419668f5ae6760de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSounds:
+  - {fileID: 8300000, guid: 02efbca14923d2c47b1fd526cf9651bc, type: 3}
+  - {fileID: 8300000, guid: 0c3fa074521347a4e98a2877b1eb7b7d, type: 3}
+  - {fileID: 8300000, guid: 60bf18ff06265c444ba110e022fb5d5f, type: 3}
+  - {fileID: 8300000, guid: 051a0ddb89aa9b7448b3d9984e2ccf42, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: 6cbd58527fd09a5419d73f487f1a01d0, type: 3}
+  - {fileID: 8300000, guid: 078c014cfde63c5419b022e540e09b37, type: 3}
+  - {fileID: 8300000, guid: f021c9c28d8d85943acf19b0d1c0f7c1, type: 3}
+  suspiciousSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  alertedSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mumbleSource: {fileID: 0}
 --- !u!212 &21258066
 SpriteRenderer:
   m_ObjectHideFlags: 1

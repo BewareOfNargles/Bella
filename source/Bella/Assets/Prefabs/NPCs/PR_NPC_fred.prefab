@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &143698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 443596}
+  m_Layer: 0
+  m_Name: SightCone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &152062
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,6 +92,7 @@ GameObject:
   - 61: {fileID: 6143080}
   - 114: {fileID: 11434578}
   - 114: {fileID: 11420690}
+  - 114: {fileID: 11470440}
   m_Layer: 0
   m_Name: PR_NPC_fred
   m_TagString: Player
@@ -98,6 +114,7 @@ Transform:
   - {fileID: 454572}
   - {fileID: 408106}
   - {fileID: 473664}
+  - {fileID: 443596}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &408106
@@ -124,6 +141,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403160}
   m_RootOrder: 0
+--- !u!4 &443596
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403160}
+  m_RootOrder: 4
 --- !u!4 &454572
 Transform:
   m_ObjectHideFlags: 1
@@ -221,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc23a656fb501814eb0a451a2f6e3d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behaviorManager: {fileID: 0}
 --- !u!114 &11434578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,6 +267,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   willBeGrounded: 0
+--- !u!114 &11470440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af957696b4080e4893a857e921099c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pacingBehavior: {fileID: 0}
 --- !u!114 &11477780
 MonoBehaviour:
   m_ObjectHideFlags: 1

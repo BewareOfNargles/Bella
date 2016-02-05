@@ -16,6 +16,7 @@ public class Platformer2DPacingControl : MonoBehaviour
 
     private int currentDirection = 0;
     public bool willBeGrounded = false;
+    private bool turningAround = false;
 
     private const float k_GroundedRadius = 0.2f;
 
@@ -43,16 +44,14 @@ public class Platformer2DPacingControl : MonoBehaviour
         {
             if (colliders[i].gameObject != gameObject)
             {
-                //if (colliders[i].gameObject.GetComponent<WeaponPickup>() == null)
-                {
-                    willBeGrounded = true;
-                }
+                willBeGrounded = true;
             }
         }
 
-        if (willBeGrounded)
+        if (willBeGrounded || turningAround)
         {
             character.Move(currentDirection, false, false);
+            turningAround = false;
         }
         else
         {
@@ -60,6 +59,7 @@ public class Platformer2DPacingControl : MonoBehaviour
 
             // Turn around!
             currentDirection *= -1;
+            turningAround = true;
         }
     }
 }

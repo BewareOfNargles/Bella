@@ -21,7 +21,9 @@ public class Projectile : MonoBehaviour
         m_rigidBody2D = GetComponent<Rigidbody2D>();
         m_velocity = new Vector2(speed * directionMultiplier, 0.0f);
 
-        transform.localScale *= directionMultiplier;
+        Vector3 scale = transform.localScale;
+        scale.x *= directionMultiplier;
+        transform.localScale = scale;
     }
 
     // Update is called once per frame

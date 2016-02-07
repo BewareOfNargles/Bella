@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class NPCBehaviorController : MonoBehaviour
 {
-    enum BehaviorStates
+    public enum NPCBehaviorStates
     {
         Pacing,
         Suspicious,
@@ -12,41 +12,28 @@ public class NPCBehaviorController : MonoBehaviour
     }
 
     // Behavioral components
-    Dictionary<BehaviorStates, NPCBehavior> behaviors;
+    Dictionary<NPCBehaviorStates, NPCBehavior> behaviors;
 
     // Logic
-    BehaviorStates currentState = BehaviorStates.Pacing;
-    Player player;
-
-
+    NPCBehaviorStates currentState = NPCBehaviorStates.Pacing;
 
 	// Use this for initialization
 	void Start()
 	{
-        player = GameObject.FindObjectOfType<Player>();
+        behaviors = new Dictionary<NPCBehaviorStates, NPCBehavior>();
 
-        behaviors = new Dictionary<BehaviorStates, NPCBehavior>();
-        behaviors.Add(BehaviorStates.Pacing, GetComponent<Platformer2DPacingControl>());
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-		
+        AddBehavior(NPCBehaviorStates.Pacing, GetComponent<Platformer2DPacingControl>());
+        AddBehavior(NPCBehaviorStates.Suspicious, GetComponent<NPCSuspiciousBehavior>());
+        AddBehavior(NPCBehaviorStates.Alarmed, GetComponent<NPCAlarmedBehavior>());
 	}
 
-    public void OnPlayerInSight()
+    private void AddBehavior(NPCBehaviorStates state, NPCBehavior behavior)
     {
-        if (currentState == BehaviorStates.Pacing)
-        {
-            if (player.equippedWeapon != Player.weapons.None)
-            {
-                SwitchState(BehaviorStates.Suspicious);
-            }
-        }
+        behavior.SetBehaviorController(this);
+        behaviors.Add(state, behavior);
     }
 
-    private void SwitchState(BehaviorStates newState)
+    public void SwitchState(NPCBehaviorStates newState)
     {
         NPCBehavior behavior;
         if (behaviors.TryGetValue(currentState, out behavior))
@@ -65,10 +52,10 @@ public class NPCBehaviorController : MonoBehaviour
 
     public void OnDeath()
     {
-        NPCBehavior pacingBehavior;
-        if (behaviors.TryGetValue(BehaviorStates.Pacing, out pacingBehavior))
+        // Our NPC has died, so kill all running behaviors
+        foreach(KeyValuePair<NPCBehaviorStates, NPCBehavior> behaviorPair in behaviors)
         {
-            pacingBehavior.Disable();
+            behaviorPair.Value.Disable();
         }
     }
 }

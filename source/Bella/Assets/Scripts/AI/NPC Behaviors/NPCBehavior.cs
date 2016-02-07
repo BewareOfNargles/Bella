@@ -3,20 +3,9 @@ using System.Collections;
 
 public class NPCBehavior : MonoBehaviour
 {
+    protected NPCBehaviorController behaviorController;
 
-	// Use this for initialization
-	void Start()
-	{
-		
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-		
-	}
-
-    public virtual void Enable()
+	public virtual void Enable()
     {
         enabled = true;
     }
@@ -24,5 +13,10 @@ public class NPCBehavior : MonoBehaviour
     public virtual void Disable()
     {
         enabled = false;
+    }
+
+    public void SetBehaviorController(NPCBehaviorController controller)
+    {
+        behaviorController = controller;
     }
 }

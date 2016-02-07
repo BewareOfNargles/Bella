@@ -7,6 +7,8 @@ public class NPC : MonoBehaviour
 
     private Animator animator;
 
+    public bool IsDead { get; private set; }
+
 	// Use this for initialization
 	void Start()
 	{
@@ -23,6 +25,8 @@ public class NPC : MonoBehaviour
     [ContextMenu("Die")]
     public void Die()
     {
+        IsDead = true;
+
         // Trigger death animation, kill behaviors
         animator.SetTrigger("OnDeath");
         behaviorManager.OnDeath();

@@ -3,12 +3,12 @@ using System.Collections;
 
 public class ViewCone : MonoBehaviour
 {
-    NPCBehaviorController behaviorManager;
+    NPCBehaviorController behaviorController;
 
 	// Use this for initialization
 	void Start()
 	{
-        behaviorManager = GetComponentInParent<NPCBehaviorController>();
+        behaviorController = GetComponentInParent<NPCBehaviorController>();
 	}
 	
 	// Update is called once per frame
@@ -19,9 +19,25 @@ public class ViewCone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Player>() != null)
+        Player player = other.gameObject.GetComponent<Player>();
+        if (player != null)
         {
-            behaviorManager.OnPlayerInSight();
+            if (player.equippedWeapon != Player.weapons.None)
+            {
+                behaviorController.SwitchState(NPCBehaviorController.NPCBehaviorStates.Suspicious);
+            }
+
+            return;
+        }
+
+        NPC npc = other.gameObject.GetComponent<NPC>();
+        if (npc != null)
+        {
+            // We're safe even though our own view cone will trigger this, because we're not dead
+            if (npc.IsDead)
+            {
+                behaviorController.SwitchState(NPCBehaviorController.NPCBehaviorStates.Suspicious);
+            }
         }
     }
 }

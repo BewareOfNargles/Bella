@@ -603,7 +603,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1279358738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bulletStartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,6 +760,22 @@ Prefab:
     - target: {fileID: 425392, guid: 6a32dd95381b0134ebe6fe8e4646f383, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 132460, guid: 6a32dd95381b0134ebe6fe8e4646f383, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 106202, guid: 6a32dd95381b0134ebe6fe8e4646f383, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 175700, guid: 6a32dd95381b0134ebe6fe8e4646f383, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 155448, guid: 6a32dd95381b0134ebe6fe8e4646f383, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a32dd95381b0134ebe6fe8e4646f383, type: 2}

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NPC : MonoBehaviour
 {
-    public NPCBehaviorManager behaviorManager;
+    public NPCBehaviorController behaviorManager;
 
     private Animator animator;
 
@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour
 	void Start()
 	{
         animator = GetComponent<Animator>();
-        behaviorManager = GetComponent<NPCBehaviorManager>();
+        behaviorManager = GetComponent<NPCBehaviorController>();
 	}
 	
 	// Update is called once per frame

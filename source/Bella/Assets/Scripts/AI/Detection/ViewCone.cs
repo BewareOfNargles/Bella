@@ -3,12 +3,12 @@ using System.Collections;
 
 public class ViewCone : MonoBehaviour
 {
-    NPCBehaviorManager behaviorManager;
+    NPCBehaviorController behaviorManager;
 
 	// Use this for initialization
 	void Start()
 	{
-        behaviorManager = GetComponentInParent<NPCBehaviorManager>();
+        behaviorManager = GetComponentInParent<NPCBehaviorController>();
 	}
 	
 	// Update is called once per frame

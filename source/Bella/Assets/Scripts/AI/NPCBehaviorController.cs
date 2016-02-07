@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class NPCBehaviorManager : MonoBehaviour
+public class NPCBehaviorController : MonoBehaviour
 {
     enum BehaviorStates
     {

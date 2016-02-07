@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 
 [RequireComponent(typeof(PlatformerCharacter2D))]
-public class Platformer2DPacingControl : MonoBehaviour
+public class Platformer2DPacingControl : NPCBehavior
 {
     public int maxPaceDistance = 10;    // Max distance the character will pace in one direction if no obstacles are in the way
 

@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485638}
   - 212: {fileID: 21267854}
+  - 60: {fileID: 6073928}
   m_Layer: 0
   m_Name: ViewCone
   m_TagString: Untagged
@@ -264,6 +265,27 @@ PolygonCollider2D:
       - {x: -0.16, y: 1.7199999}
       - {x: -0.049999997, y: 1.61}
       - {x: -0.11, y: 1.5799999}
+--- !u!60 &6073928
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119260}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.803503, y: 2.4659314}
+      - {x: 2.356315, y: 0.25018948}
+      - {x: 2.229842, y: -0.3778488}
+      - {x: 0.45416275, y: -1.6568389}
+      - {x: -2.014268, y: -2.2827377}
+      - {x: -2.4660728, y: -0.4908957}
+      - {x: -2.1995323, y: 1.0968068}
 --- !u!61 &6143080
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -334,7 +356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af957696b4080e4893a857e921099c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pacingBehavior: {fileID: 0}
 --- !u!114 &11477780
 MonoBehaviour:
   m_ObjectHideFlags: 1

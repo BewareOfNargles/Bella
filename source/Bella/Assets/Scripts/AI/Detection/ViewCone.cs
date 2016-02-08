@@ -19,6 +19,7 @@ public class ViewCone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("ViewCone - OnTriggerEnter2D!");
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null)
         {

@@ -45,7 +45,11 @@ public class Player : MonoBehaviour
     public void PickUpWeapon(Weapon weapon)
     {
         currentWeapon = weapon;
+
         //Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
+
+        Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
+        currentWeapon.PlayPickupSound();
     }
 
     public PlatformerCharacter2D GetCharacterController()

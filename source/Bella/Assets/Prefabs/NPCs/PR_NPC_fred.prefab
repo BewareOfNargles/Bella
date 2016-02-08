@@ -128,6 +128,8 @@ GameObject:
   - 114: {fileID: 11434578}
   - 114: {fileID: 11420690}
   - 114: {fileID: 11470440}
+  - 114: {fileID: 11484712}
+  - 114: {fileID: 11466064}
   m_Layer: 0
   m_Name: PR_NPC_fred
   m_TagString: Player
@@ -403,6 +405,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   willBeGrounded: 0
+--- !u!114 &11466064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d62025d97408d40bd56dc64453d706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeBecomingAlarmed: 3
 --- !u!114 &11470440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,6 +446,17 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11484712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22504794d298f146ae029c6569643c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21205732
 SpriteRenderer:
   m_ObjectHideFlags: 1

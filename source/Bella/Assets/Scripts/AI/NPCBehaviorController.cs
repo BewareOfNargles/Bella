@@ -8,7 +8,8 @@ public class NPCBehaviorController : MonoBehaviour
     {
         Pacing,
         Suspicious,
-        Alarmed
+        Alarmed,
+        Dead
     }
 
     // Behavioral components
@@ -22,7 +23,10 @@ public class NPCBehaviorController : MonoBehaviour
 	{
         behaviors = new Dictionary<NPCBehaviorStates, NPCBehavior>();
 
-        AddBehavior(NPCBehaviorStates.Pacing, GetComponent<Platformer2DPacingControl>());
+        Platformer2DPacingControl pacingBehavior = GetComponent<Platformer2DPacingControl>();
+        AddBehavior(NPCBehaviorStates.Pacing, pacingBehavior);
+        pacingBehavior.Enable();
+
         AddBehavior(NPCBehaviorStates.Suspicious, GetComponent<NPCSuspiciousBehavior>());
         AddBehavior(NPCBehaviorStates.Alarmed, GetComponent<NPCAlarmedBehavior>());
 	}
@@ -30,6 +34,7 @@ public class NPCBehaviorController : MonoBehaviour
     private void AddBehavior(NPCBehaviorStates state, NPCBehavior behavior)
     {
         behavior.SetBehaviorController(this);
+        behavior.Disable();
         behaviors.Add(state, behavior);
     }
 
@@ -57,5 +62,7 @@ public class NPCBehaviorController : MonoBehaviour
         {
             behaviorPair.Value.Disable();
         }
+
+        currentState = NPCBehaviorStates.Dead;
     }
 }

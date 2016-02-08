@@ -22,6 +22,7 @@ public class ViewCone : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null)
         {
+            Debug.Log("ViewCone collided with player!");
             if (player.equippedWeapon != Player.weapons.None)
             {
                 behaviorController.SwitchState(NPCBehaviorController.NPCBehaviorStates.Suspicious);

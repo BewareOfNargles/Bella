@@ -11,6 +11,7 @@ GameObject:
   - 61: {fileID: 6185608}
   - 114: {fileID: 11408462}
   - 114: {fileID: 11495352}
+  - 82: {fileID: 8251266}
   m_Layer: 8
   m_Name: pr_rifle
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.50757, y: -14.455294, z: 0}
+  m_LocalPosition: {x: 48.85, y: 33.42, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 451616}
@@ -102,6 +103,80 @@ BoxCollider2D:
   m_Offset: {x: 0.004867077, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.7157428, y: 1}
+--- !u!82 &8251266
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116674}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11408462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,6 +193,14 @@ MonoBehaviour:
   player: {fileID: 0}
   numShots: 3
   range: 3
+  pickupSounds:
+  - {fileID: 8300000, guid: bd50fceef150a9144b11ae282c559cde, type: 3}
+  - {fileID: 8300000, guid: 4133c488dac8ff84480150ac1b62b34e, type: 3}
+  - {fileID: 8300000, guid: bb572f993c590dc4f9da2abe3c8b7f35, type: 3}
+  fireSounds:
+  - {fileID: 8300000, guid: fcd48bff513136c40b93c9b158a78ccf, type: 3}
+  - {fileID: 8300000, guid: 52fb482bfc7c2f241bef2ce8d2c1776f, type: 3}
+  - {fileID: 8300000, guid: 37833986ef9de0348bb40b0d9dc2677e, type: 3}
 --- !u!114 &11495352
 MonoBehaviour:
   m_ObjectHideFlags: 1

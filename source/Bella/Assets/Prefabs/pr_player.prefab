@@ -330,7 +330,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0c3fa074521347a4e98a2877b1eb7b7d, type: 3}
   - {fileID: 8300000, guid: 60bf18ff06265c444ba110e022fb5d5f, type: 3}
   - {fileID: 8300000, guid: 051a0ddb89aa9b7448b3d9984e2ccf42, type: 3}
-  deathSounds: []
+  deathSounds:
+  - {fileID: 8300000, guid: 484c110a92bba7545b1a8bf48b06f3cc, type: 3}
+  - {fileID: 8300000, guid: 439ddad6c73a99e4ca4c2d20ae946c4e, type: 3}
+  - {fileID: 8300000, guid: 0d177d1e2432bf044b460ffaa6003dbc, type: 3}
   suspiciousSounds: []
   alertedSounds: []
   mumbleSource: {fileID: 0}
@@ -377,7 +380,7 @@ MonoBehaviour:
   maxBodies: 7
   numBodies: 0
   insanity: 0
-  maxInsanity: 100
+  maxInsanity: 300
   dangerThreshold: 80
   rateOfInsanityIncrease: 5
   speedLossPerBody: 0

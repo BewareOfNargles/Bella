@@ -48,6 +48,12 @@ public class NPCSoundHelper : MonoBehaviour
             return;
         }
         mainAudioSource.PlayOneShot(PickRandom(deathSounds));
+
+        // Disable mumbling
+        if(mumbleSource != null)
+        {
+            mumbleSource.Stop();
+        }
     }
 
     public void SuspiciousSound()

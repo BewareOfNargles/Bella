@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        Debug.Log("Fire! (Weapon type " + weaponType.ToString() + ")");
+        //Debug.Log("Fire! (Weapon type " + weaponType.ToString() + ")");
         numShots--;
         if (numShots == 0)
         {

@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public int maxInsanity = 100;
     public int dangerThreshold = 80;
     public int rateOfInsanityIncrease = 5;  // Per second
-    public int speedLossPerBody = 0;
+    public int speedLossPerBody = 0;        // TODO: Implement this
 
     public Weapon currentWeapon = null;
     public weapons equippedWeapon = weapons.None;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     public void PickUpWeapon(Weapon weapon)
     {
         currentWeapon = weapon;
-        Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
+        //Debug.Log("Picked up weapon of type " + weapon.weaponType.ToString());
     }
 
     public PlatformerCharacter2D GetCharacterController()

@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467832}
   - 212: {fileID: 21224396}
+  - 114: {fileID: 11457656}
   m_Layer: 0
   m_Name: status_suspicious
   m_TagString: Untagged
@@ -26,7 +27,8 @@ GameObject:
   - 4: {fileID: 485638}
   - 212: {fileID: 21267854}
   - 60: {fileID: 6073928}
-  m_Layer: 0
+  - 114: {fileID: 11482652}
+  m_Layer: 13
   m_Name: ViewCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,6 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 401668}
   - 212: {fileID: 21252356}
+  - 114: {fileID: 11494266}
   m_Layer: 0
   m_Name: status_alert
   m_TagString: Untagged
@@ -405,6 +408,29 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   willBeGrounded: 0
+--- !u!114 &11457656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef48e130d37f144eaceff745e733e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitLowerX: 1
+  limitUpperX: 1
+  limitLowerY: 0
+  limitUpperY: 0
+  limitLowerZ: 0
+  limitUpperZ: 0
+  lowerLimitX: 0
+  upperLimitX: 1
+  lowerLimitY: 0
+  upperLimitY: 0
+  lowerLimitZ: 0
+  upperLimitZ: 0
 --- !u!114 &11466064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,6 +472,17 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11482652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543fcbd85f7d14646accc7ec88c5f5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -457,6 +494,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22504794d298f146ae029c6569643c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11494266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef48e130d37f144eaceff745e733e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitLowerX: 1
+  limitUpperX: 1
+  limitLowerY: 0
+  limitUpperY: 0
+  limitLowerZ: 0
+  limitUpperZ: 0
+  lowerLimitX: 0
+  upperLimitX: 1
+  lowerLimitY: 0
+  upperLimitY: 0
+  lowerLimitZ: 0
+  upperLimitZ: 0
 --- !u!212 &21205732
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -46,18 +46,12 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // We don't care if the bullet collided with the player.
-        if (other.gameObject.GetComponent<Player>() == null &&
-            other.gameObject.GetComponent<Projectile>() == null &&
-            other.gameObject.GetComponent<WeaponPickup>() == null)
+        NPC npc = other.gameObject.GetComponent<NPC>();
+        if (npc != null)
         {
-            NPC npc = other.gameObject.GetComponent<NPC>();
-            if (npc != null)
-            {
-                npc.Die();
-            }
-
-            Destroy(gameObject);
+            npc.Die();
         }
+
+        Destroy(gameObject);
     }
 }

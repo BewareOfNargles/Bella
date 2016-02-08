@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace UnityStandardAssets._2D
 {
@@ -19,6 +20,8 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+
+        
 
         private void Awake()
         {
@@ -110,6 +113,7 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+            //spriteRenderer.flipX = !m_FacingRight;
         }
 
         public int GetDirectionMultiplier()

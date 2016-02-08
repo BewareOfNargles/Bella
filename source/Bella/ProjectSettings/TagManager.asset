@@ -16,7 +16,7 @@ TagManager:
   - Pickups
   - Junk
   - Player
-  - 
+  - Outline
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Far_Background
+    uniqueID: 2063326831
+    locked: 0
   - name: Background
     uniqueID: 1641862283
     locked: 0

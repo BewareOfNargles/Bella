@@ -647,6 +647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90e729c96ce7aa4b8fa3b33ec9ee8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endOfGame: 0
+  nextLevel: 
 --- !u!61 &105523315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -672,7 +674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 157
+  m_RootOrder: 139
 --- !u!1001 &113105610
 Prefab:
   m_ObjectHideFlags: 0
@@ -2318,7 +2320,7 @@ Transform:
   - {fileID: 1300419724}
   - {fileID: 1462097583}
   m_Father: {fileID: 0}
-  m_RootOrder: 156
+  m_RootOrder: 136
 --- !u!1001 &464625728
 Prefab:
   m_ObjectHideFlags: 0
@@ -4702,7 +4704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22489608, guid: 418692e229e81c24594dc8ab619ae39e, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22330538, guid: 418692e229e81c24594dc8ab619ae39e, type: 2}
       propertyPath: m_Camera
@@ -8320,7 +8322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1001 &1409732822
 Prefab:
   m_ObjectHideFlags: 0
@@ -9180,7 +9182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
 --- !u!1001 &1546005745
 Prefab:
   m_ObjectHideFlags: 0
@@ -10826,7 +10828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!1001 &1861531882
 Prefab:
   m_ObjectHideFlags: 0

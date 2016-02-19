@@ -2,7 +2,10 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class EndOfLevelPoint : MonoBehaviour {
+public class EndOfLevelPoint : MonoBehaviour
+{
+    public bool endOfGame = false;
+    public string nextLevel = "";
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +21,14 @@ public class EndOfLevelPoint : MonoBehaviour {
     {
         if(coll.gameObject.GetComponent<Player>()  != null)
         {
-            SceneManager.LoadScene("WinLevel");
+            if (endOfGame)
+            {
+                SceneManager.LoadScene("WinLevel");
+            }
+            else
+            {
+                SceneManager.LoadScene(nextLevel);
+            }
         }
     }
 }

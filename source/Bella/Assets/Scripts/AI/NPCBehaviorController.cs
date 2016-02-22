@@ -57,12 +57,15 @@ public class NPCBehaviorController : MonoBehaviour
 
     public void OnDeath()
     {
-        // Our NPC has died, so kill all running behaviors
-        foreach(KeyValuePair<NPCBehaviorStates, NPCBehavior> behaviorPair in behaviors)
+        if (currentState != NPCBehaviorStates.Dead)
         {
-            behaviorPair.Value.Disable();
-        }
+            // Our NPC has died, so kill all running behaviors
+            foreach (KeyValuePair<NPCBehaviorStates, NPCBehavior> behaviorPair in behaviors)
+            {
+                behaviorPair.Value.Disable();
+            }
 
-        currentState = NPCBehaviorStates.Dead;
+            currentState = NPCBehaviorStates.Dead;
+        }
     }
 }

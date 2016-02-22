@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         PlaySelectSound();
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void OpenOptions()

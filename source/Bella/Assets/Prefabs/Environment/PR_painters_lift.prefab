@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453756}
+  - 114: {fileID: 11482224}
   m_Layer: 0
   m_Name: PR_painters_lift
   m_TagString: Untagged
@@ -50,12 +51,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36, y: 0, z: 0}
+  m_LocalPosition: {x: 26, y: -20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438182}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11482224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca983f7fff7ead4c88a1f91dffa05a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  note: this should go from floor 1(start) to floor 10
 --- !u!212 &21250818
 SpriteRenderer:
   m_ObjectHideFlags: 1

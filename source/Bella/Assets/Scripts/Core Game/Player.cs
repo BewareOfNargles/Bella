@@ -4,13 +4,16 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    public static int NumberAlarmedNPCs = 0;
+
     public int maxBodies = 7;
     public int numBodies = 0;
     public int insanity = 0;
     public int maxInsanity = 100;
     public int dangerThreshold = 80;
-    public int rateOfInsanityIncrease = 5;  // Per second
-    public int speedLossPerBody = 0;        // TODO: Implement this
+    public int rateOfInsanityIncrease = 5;              // Per second
+    public float insanityIncreaseMultiplier = 2.0f;     // When at least 1 NPC is alarmed, insanity will increase by insanityIncreaseMultiplier*rateOfInsanityIncrease per second
+    public int speedLossPerBody = 0;                    // TODO: Implement this
 
     public Weapon currentWeapon = null;
     public weapons equippedWeapon = weapons.None;
@@ -36,7 +39,9 @@ public class Player : MonoBehaviour
             if (insanityTickTimer >= 1)
             {
                 insanityTickTimer = 0;
-                insanity += rateOfInsanityIncrease;
+                // TODO_OPTIMIZE: This can be done better, but I don't care right now and this is a 2d game so I'll probably never care. :D
+                float multiplier = NumberAlarmedNPCs > 0 ? insanityIncreaseMultiplier : 1.0f;
+                insanity += (int)(rateOfInsanityIncrease * multiplier);
                 //Debug.Log("Insanity increased to " + insanity);
             }
         }

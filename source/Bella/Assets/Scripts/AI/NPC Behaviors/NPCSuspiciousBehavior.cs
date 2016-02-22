@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets._2D;
 
 public class NPCSuspiciousBehavior : NPCBehavior
 {
@@ -33,6 +34,8 @@ public class NPCSuspiciousBehavior : NPCBehavior
 
         // Attach suspicious icon
         suspiciousIcon.SetActive(true);
+        PlatformerCharacter2D controller = GetComponentInParent<PlatformerCharacter2D>();
+        controller.Move(0.0f, false, false);
     }
 
     public override void Disable()

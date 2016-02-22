@@ -27,7 +27,7 @@ public class EndOfLevelPoint : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(nextLevel);
+                SceneManager.LoadScene("LevelSelect");
             }
         }
     }
